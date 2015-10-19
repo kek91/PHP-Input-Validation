@@ -7,15 +7,7 @@ if(!empty($_POST)) {
             'required' => true,
             'length_min' => 3,
             'length_max' => 15,
-            'alphabetic' => true,
-            'blacklist' => array(
-                'administrator',
-                'qwerty',
-                'root',
-                'toor',
-                'superman',
-                'sudo',
-                'tux')
+            'alphabetic' => true
         ),
         'password' => array(
             'required' => true,
@@ -24,11 +16,9 @@ if(!empty($_POST)) {
     ));
 
     if($validation->passed()) {
-        /* Validation ok, do whatever you want from here on */
         echo 'Validation passed!';
     }
     else {
-        /* Validation failed, output errors from Validation class */
         echo '<b>Error:</b>';
         echo '<ul>';
         foreach($validation->errors() as $error)
