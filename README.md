@@ -1,5 +1,4 @@
 # PHP Input Validation
-## Work in progress
 
 Easy to use PHP class for validating user input from HTML form input fields or anywhere else you may use it.
 
